@@ -1,0 +1,19 @@
+{
+  "name": "studentms",
+  "version": "1.0.1",
+  "description": "Manage Student Records",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jas1906/StudentMs.git"
+  },
+  "author": "Jason Jason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jas1906/StudentMs/issues"
+  },
+  "homepage": "https://github.com/Jas1906/StudentMs#readme"
+}
