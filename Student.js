@@ -62,6 +62,9 @@ class Student{// create student class
             console.log("invalid input marks");
         }
     }
+    get studentMarks(){
+        return this.stu_marks;
+    }
 
 
 

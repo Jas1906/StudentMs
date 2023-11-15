@@ -1,5 +1,8 @@
 const ps=require('prompt-sync');
 const prompt=ps();
+
+const fs=require('fs');
+
 const {Student}=require('./Student.js');
 
 var studentDetails=new Array();// creating global array to store student object
@@ -62,4 +65,62 @@ function addStudentMarks(stuno,stumarks){// add marks to student object
 
 }
 
-module.exports={regStudents,addStudentMarks};
+function writeStudentDetails(stuno){//display in text file
+    for(var i=0;i<studentDetails.length;i++){
+
+        if(studentDetails[i].studentNo==stuno){
+
+            const stuDetails=fs.writeFileSync(studentDetails[i].studentNo+'.txt','Student No: '+studentDetails[i].studentNo+'\nStudent Name: '+studentDetails[i].studentName+'\nStudent Marks: '+studentDetails[i].studentMarks);
+
+            console.log('data is writter to external txt file');
+            break;
+        }
+    }
+
+}
+
+function classAverage(className){
+    let classAvg=0;
+    let total=0;
+    let stuCount=0;
+
+    for(var i=0;i<studentDetails.length;i++){
+
+        if(studentDetails[i].studentClass==className){
+            total=total+Number(studentDetails[i].studentMarks);
+            stuCount++; //stuCount=stuCount+1 counting num of students
+        }
+
+    }
+
+    classAvg=total/stuCount;
+    console.log("======================");
+    console.log("average marks : "+classAvg);
+}
+
+function calGrade(){
+    let stuNo=prompt('enter student no: ')
+
+    for(var i=0;i<studentDetails.length;i++){
+        if(studentDetails[i].studentNo==stuNo){
+
+            let marks=studentDetails[i].studentMarks;
+
+            if(marks>=80){
+                console.log("A");
+            }
+            else if(marks>=60){
+                console.log("B");
+            }
+            else if(marks>=45){
+                console.log("C");
+            }
+            else{
+                console.log("F");
+            }
+        }
+
+    }
+}
+
+module.exports={regStudents,addStudentMarks,writeStudentDetails,classAverage,calGrade};

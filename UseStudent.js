@@ -24,13 +24,18 @@ else if(choice==2){
     choice=0;
 }
 else if(choice==3){
-
+    stuFunctions.calGrade()
+    choice=0
 }
 else if(choice==4){
-
+    let stuNo=prompt("enter a student Number: ")
+    stuFunctions.writeStudentDetails(stuNo);
+    choice=0;
 }
 else if(choice==5){
-
+    let cName=prompt("Class Name : ");
+    stuFunctions.classAverage(cName);
+    choice=0
 }
 else if(choice==6){
     break;// close loop
