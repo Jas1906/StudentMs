@@ -8,7 +8,7 @@ class Student{// create student class
         this.stu_marks="";
     }
     set studentNo(stuno){
-        if(stuno.lenght==5){//checking number of characters
+        if(stuno.length==5){//checking number of characters
             this.stu_no=stuno;
         }
         else{
@@ -30,7 +30,7 @@ class Student{// create student class
         return this.stu_name;
     }
     set studentBday(bday){
-        if(bday.lenght==8){
+        if(bday.length==8){
             this.stu_bday=bday;
 
         }
