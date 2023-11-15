@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jas1906/StudentMs/issues"
   },
-  "homepage": "https://github.com/Jas1906/StudentMs#readme"
+  "homepage": "https://github.com/Jas1906/StudentMs#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
